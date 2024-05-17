@@ -3,6 +3,11 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const changeMode = document.getElementById('modeIcon');
+const body = document.body;
+const container = document.querySelector('.container');
+const title = document.querySelector('h2');
+const inputs = document.getElementsByClassName('formControl')
 
 // functions
 
@@ -84,5 +89,39 @@ form.addEventListener('submit', function (e) {
     checkEmail(email);
     checkPasswordsMatch(password,password2);
 
+})
+
+changeMode.addEventListener('click',()=>{
+    if(changeMode.classList.contains('fa-sun'))
+    {
+        changeMode.classList.remove('fa-sun')
+        changeMode.classList.add('fa-moon')
+        body.classList.remove('light')
+        body.classList.add('dark')
+        title.style.color = 'white'
+        container.classList.remove('light')
+        container.classList.add('dark')
+        for (let i =0;i< inputs.length;i++)
+        {
+            let item = inputs[i].childNodes[3]
+            item.classList.add('dark')
+        }
+
+    }
+    else
+    {
+        changeMode.classList.remove('fa-moon')
+        changeMode.classList.add('fa-sun')
+        body.classList.remove('dark')
+        body.classList.add('light')
+        container.classList.add('light')
+        container.classList.remove('dark')
+        title.style.color = 'black'
+        for (let i =0;i< inputs.length;i++)
+        {
+            let item = inputs[i].childNodes[3]
+            item.classList.remove('dark')
+        }
+    }
 })
 
