@@ -53,11 +53,11 @@ h2{
     display: block;
     padding:0.625rem;
     font-size: 0.875rem ;
+    width: 100%;
 }
 .formControl input:focus{
     outline: none;
     border-color: #777777;
-
 }
 
 .formControl.success input {
@@ -66,18 +66,19 @@ h2{
 
 .formControl.error input {
     border-color: var(--errorColor);
+    margin-bottom: 1rem;
 }
 
 .formControl small {
     color: var(--errorColor);
     position: absolute;
     bottom:0;
-    left: 0;
+
     visibility: hidden;
 }
 
 .formControl.error small {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .form button{
@@ -89,5 +90,5 @@ h2{
     font-size: 1rem;
     padding: 10px;
     margin-top : 2px;
-    width: 100px;
+    width: 100%;
 }
