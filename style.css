@@ -24,7 +24,7 @@ body.light{
 
 body.dark
 {
-    background-color: #1a1919;
+    background-color: #121212;
 }
 
 .container{
@@ -39,7 +39,7 @@ body.dark
 }
 
 .container.dark{
-    background-color: #3c3434;
+    background-color: #282828;
 }
 
 
@@ -74,8 +74,9 @@ h2{
     width: 100%;
 }
 .formControl input.dark{
-    background-color: gray;
+    background-color: #3f3f3f;
     color: white;
+
 }
 
 .formControl input:focus{
@@ -115,6 +116,11 @@ h2{
     margin-top : 2px;
     width: 100%;
 }
+
+.form button.dark{
+    background-color: #1a1625;
+}
+
 
 /*dark mode*/
 .header

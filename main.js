@@ -8,7 +8,7 @@ const body = document.body;
 const container = document.querySelector('.container');
 const title = document.querySelector('h2');
 const inputs = document.getElementsByClassName('formControl')
-
+const subButton = document.querySelector('button')
 // functions
 
 function showError(input, msg) // show input Error message
@@ -106,7 +106,7 @@ changeMode.addEventListener('click',()=>{
             let item = inputs[i].childNodes[3]
             item.classList.add('dark')
         }
-
+        subButton.classList.add('dark')
     }
     else
     {
@@ -122,6 +122,7 @@ changeMode.addEventListener('click',()=>{
             let item = inputs[i].childNodes[3]
             item.classList.remove('dark')
         }
+        subButton.classList.remove('dark')
     }
 })
 
